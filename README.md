@@ -4,7 +4,7 @@ Run a CUPS print server on a remote machine to share USB printers over WiFi. Bui
 
 Container packages available from Docker Hub and Github Container Registry (ghcr.io)
   - Docker Hub Image: `anujdatar/cups`
-  - GHCR Image: `ghcr.io/anujdatar/cups`
+  - GHCR Image: `ghcr.io/jebril76/cups`
 
 ## Usage
 Quick start with default parameters
@@ -22,7 +22,7 @@ docker run -d --name cups \
     -e CUPSPASSWORD=batcave_password \
     -e TZ="America/Gotham" \
     -v <persistent-config-folder>:/etc/cups \
-    anujdatar/cups
+    ghcr.io/jebril76/cups
 ```
 > Note: :P make sure you use valid TZ string, this is just a joke. Also changing the default username and password is highly recommended.
 
@@ -46,7 +46,7 @@ Environment variables that can be changed to suit your needs, use the `-e` tag
 version: "3"
 services:
     cups:
-        image: anujdatar/cups
+        image: ghcr.io/jebril76/cups
         container_name: cups
         restart: unless-stopped
         ports:
@@ -68,3 +68,4 @@ If you are running this on your PC, i.e. not on a headless server, you should be
 
 ## Thanks
 Based on the work done by **RagingTiger**: [https://github.com/RagingTiger/cups-airprint](https://github.com/RagingTiger/cups-airprint)
+and **anujdatar**:{https://hub.docker.com/r/anujdatar/cups](https://hub.docker.com/r/anujdatar/cups)
