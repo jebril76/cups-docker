@@ -31,6 +31,7 @@ RUN apt-get update -qq  && apt-get upgrade -qqy \
     hplip \
     avahi-daemon \
     cups-tea4cups \
+    mc \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
