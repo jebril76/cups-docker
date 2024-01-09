@@ -2,15 +2,15 @@ FROM debian:stable-slim
 
 # ENV variables
 ENV DEBIAN_FRONTEND noninteractive
-ENV TZ "America/New_York"
+ENV TZ "Europe/Berlin"
 ENV CUPSADMIN admin
 ENV CUPSPASSWORD password
 
 
-LABEL org.opencontainers.image.source="https://github.com/anujdatar/cups-docker"
+LABEL org.opencontainers.image.source="https://github.com/jebril76/cups-docker"
 LABEL org.opencontainers.image.description="CUPS Printer Server"
-LABEL org.opencontainers.image.author="Anuj Datar <anuj.datar@gmail.com>"
-LABEL org.opencontainers.image.url="https://github.com/anujdatar/cups-docker/blob/main/README.md"
+#LABEL org.opencontainers.image.author="Anuj Datar <anuj.datar@gmail.com>"
+LABEL org.opencontainers.image.url="https://github.com/jebril76/cups-docker/blob/main/README.md"
 LABEL org.opencontainers.image.licenses=MIT
 
 
@@ -30,6 +30,7 @@ RUN apt-get update -qq  && apt-get upgrade -qqy \
     hp-ppd \
     hplip \
     avahi-daemon \
+    cups-tea4cups \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
