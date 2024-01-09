@@ -68,4 +68,4 @@ If you are running this on your PC, i.e. not on a headless server, you should be
 
 ## Thanks
 Based on the work done by **RagingTiger**: [https://github.com/RagingTiger/cups-airprint](https://github.com/RagingTiger/cups-airprint)
-and **anujdatar**:(https://hub.docker.com/r/anujdatar/cups](https://hub.docker.com/r/anujdatar/cups)
+and **anujdatar**:[https://hub.docker.com/r/anujdatar/cups](https://hub.docker.com/r/anujdatar/cups)
